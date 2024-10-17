@@ -47,10 +47,10 @@ jobs:
       - name: Run Unit Tests
         run: npm run test
 
-   #  - name: Build Detox and Run E2E Tests
-      #   run: |
-      #     npm run detox:genymotion_cloud
-      #     npm run detox:genymotion_cloud
+      - name: Build Detox and Run E2E Tests
+        run: |
+          npm run detox:genymotion_cloud
+          npm run detox:genymotion_cloud
       
       # Prefer to run localy e2e beacause it requires high computation and cost much on cloud services
       # If you have money go with Genymotion 0.05$ per minute😁
