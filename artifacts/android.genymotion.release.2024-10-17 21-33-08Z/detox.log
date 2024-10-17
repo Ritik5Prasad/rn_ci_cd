@@ -1,0 +1,573 @@
+03:03:08.462 detox[42824] [90mB[39m [33mlifecycle[39m node_modules/.bin/detox test --configuration android.genymotion.release -l verbose --maxWorkers 2 --record-logs all --take-screenshots all
+  data: {
+    "id": "87bb7d58-0772-249b-6556-258bc1a60f0a",
+    "detoxConfig": {
+      "configurationName": "android.genymotion.release",
+      "apps": {
+        "default": {
+          "type": "android.apk",
+          "binaryPath": "android/app/build/outputs/apk/release/app-release.apk",
+          "build": "cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release"
+        }
+      },
+      "artifacts": {
+        "rootDir": "artifacts/android.genymotion.release.2024-10-17 21-33-08Z",
+        "plugins": {
+          "log": {
+            "enabled": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "screenshot": {
+            "enabled": true,
+            "shouldTakeAutomaticSnapshots": true,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "video": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "instruments": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          },
+          "uiHierarchy": {
+            "enabled": false,
+            "keepOnlyFailedTestsArtifacts": false
+          }
+        }
+      },
+      "behavior": {
+        "init": {
+          "keepLockFile": false,
+          "reinstallApp": true,
+          "exposeGlobals": true
+        },
+        "cleanup": {
+          "shutdownDevice": false
+        },
+        "launchApp": "auto"
+      },
+      "cli": {
+        "recordLogs": "all",
+        "takeScreenshots": "all",
+        "configuration": "android.genymotion.release",
+        "loglevel": "verbose",
+        "start": true
+      },
+      "commands": [
+        {
+          "appName": "default",
+          "build": "cd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release"
+        }
+      ],
+      "device": {
+        "type": "android.genycloud",
+        "device": {
+          "recipeUUID": "a521e033-0fa6-4579-9b2c-8f877ea50af2"
+        }
+      },
+      "logger": {
+        "level": "debug",
+        "overrideConsole": true,
+        "options": {
+          "showLoggerName": true,
+          "showPid": true,
+          "showLevel": false,
+          "showMetadata": false,
+          "basepath": "/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src",
+          "prefixers": {},
+          "stringifiers": {}
+        }
+      },
+      "testRunner": {
+        "retries": 0,
+        "forwardEnv": false,
+        "detached": false,
+        "bail": false,
+        "jest": {
+          "setupTimeout": 120000,
+          "teardownTimeout": 30000,
+          "retryAfterCircusRetries": false,
+          "reportWorkerAssign": true
+        },
+        "args": {
+          "$0": "jest",
+          "_": [],
+          "config": "e2e/jest.config.js",
+          "maxWorkers": 2,
+          "--": []
+        }
+      },
+      "session": {
+        "autoStart": true,
+        "debugSynchronization": 10000
+      }
+    },
+    "detoxIPCServer": "primary-42824",
+    "testResults": [],
+    "testSessionIndex": 0,
+    "workersCount": 0
+  }
+03:03:08.469 detox[42824] [90mi[39m [33mipc[39m Server path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + ipc.config.id /tmp/detox.primary-42824
+03:03:08.469 detox[42824] [90mi[39m [33mipc[39m starting server on  /tmp/detox.primary-42824 
+03:03:08.469 detox[42824] [90mi[39m [33mipc[39m starting TLS server false
+03:03:08.470 detox[42824] [90mi[39m [33mipc[39m starting server as Unix || Windows Socket
+03:03:08.472 detox[42824] [90mi[39m [33mws-server[39m Detox server listening on localhost:51700...
+03:03:08.475 detox[42824] [90mi[39m [33mlifecycle[39m Serialized the session state at: /private/var/folders/jk/j8whj75d4v7cppchzdvg73v80000gn/T/87bb7d58-0772-249b-6556-258bc1a60f0a.detox.json
+03:03:08.476 detox[42824] [90mB[39m [33mlifecycle[39m jest --config e2e/jest.config.js --maxWorkers 2
+03:03:09.368 detox[42834] [90mi[39m [33mipc[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+03:03:09.370 detox[42834] [90mi[39m [33mipc[39m requested connection to  primary-42824 /tmp/detox.primary-42824
+03:03:09.370 detox[42834] [90mi[39m [33mipc[39m Connecting client on Unix Socket : /tmp/detox.primary-42824
+03:03:09.371 detox[42824] [90mi[39m [33mipc[39m ## socket connection to server detected ##
+03:03:09.371 detox[42834] [90mi[39m [33mipc[39m retrying reset
+03:03:09.372 detox[42834] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerContext , { id: 'secondary-42834' }
+03:03:09.374 detox[42824] [90mi[39m [33mipc[39m received event of :  registerContext { id: 'secondary-42834' }
+03:03:09.374 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+03:03:09.374 detox[42834] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.374 detox[42834] [90mi[39m [33mipc[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+03:03:09.572 detox[42867] [90mB[39m [33mlifecycle[39m e2e/AppLaunch.test.js
+03:03:09.572 detox[42868] [90mB[39m [33mlifecycle[39m e2e/RegisterProcess.test.js
+03:03:09.586 detox[42867] [90mB[39m [33mlifecycle[39m set up environment
+03:03:09.586 detox[42868] [90mB[39m [33mlifecycle[39m set up environment
+03:03:09.589 detox[42867] [90mi[39m [33mipc[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+03:03:09.589 detox[42867] [90mi[39m [33mipc[39m requested connection to  primary-42824 /tmp/detox.primary-42824
+03:03:09.589 detox[42867] [90mi[39m [33mipc[39m Connecting client on Unix Socket : /tmp/detox.primary-42824
+03:03:09.589 detox[42868] [90mi[39m [33mipc[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+03:03:09.589 detox[42868] [90mi[39m [33mipc[39m requested connection to  primary-42824 /tmp/detox.primary-42824
+03:03:09.589 detox[42868] [90mi[39m [33mipc[39m Connecting client on Unix Socket : /tmp/detox.primary-42824
+03:03:09.590 detox[42824] [90mi[39m [33mipc[39m ## socket connection to server detected ##
+03:03:09.590 detox[42824] [90mi[39m [33mipc[39m ## socket connection to server detected ##
+03:03:09.591 detox[42867] [90mi[39m [33mipc[39m retrying reset
+03:03:09.591 detox[42868] [90mi[39m [33mipc[39m retrying reset
+03:03:09.592 detox[42824] [90mi[39m [33mipc[39m received event of :  registerContext { id: 'secondary-42868' }
+03:03:09.592 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+03:03:09.592 detox[42867] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerContext , { id: 'secondary-42867' }
+03:03:09.592 detox[42868] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerContext , { id: 'secondary-42868' }
+03:03:09.593 detox[42824] [90mi[39m [33mipc[39m received event of :  registerContext { id: 'secondary-42867' }
+03:03:09.593 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+03:03:09.593 detox[42867] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.593 detox[42867] [90mi[39m [33mipc[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+03:03:09.593 detox[42868] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.593 detox[42868] [90mi[39m [33mipc[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+03:03:09.593 detox[42868] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerWorker , { workerId: 'w2' }
+03:03:09.594 detox[42824] [90mi[39m [33mipc[39m received event of :  registerWorker { workerId: 'w2' }
+03:03:09.594 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerWorkerDone { workersCount: 1 }
+03:03:09.594 detox[42824] [90mi[39m [33mipc[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-42824  :   sessionStateUpdate { workersCount: 1 }
+03:03:09.594 detox[42867] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerWorker , { workerId: 'w1' }
+03:03:09.595 detox[42824] [90mi[39m [33mipc[39m received event of :  registerWorker { workerId: 'w1' }
+03:03:09.595 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerWorkerDone { workersCount: 2 }
+03:03:09.595 detox[42824] [90mi[39m [33mipc[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-42824  :   sessionStateUpdate { workersCount: 2 }
+03:03:09.595 detox[42834] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.595 detox[42834] [90mi[39m [33mipc[39m detected event sessionStateUpdate { workersCount: 1 }
+03:03:09.595 detox[42834] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.595 detox[42834] [90mi[39m [33mipc[39m detected event sessionStateUpdate { workersCount: 2 }
+03:03:09.595 detox[42868] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.596 detox[42867] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.596 detox[42867] [90mi[39m [33mipc[39m detected event sessionStateUpdate { workersCount: 1 }
+03:03:09.596 detox[42867] [90mi[39m [33mipc[39m detected event registerWorkerDone { workersCount: 2 }
+03:03:09.596 detox[42867] [90mi[39m [33mipc[39m detected event sessionStateUpdate { workersCount: 2 }
+03:03:09.596 detox[42868] [90mi[39m [33mipc[39m detected event registerWorkerDone { workersCount: 1 }
+03:03:09.596 detox[42868] [90mi[39m [33mipc[39m detected event sessionStateUpdate { workersCount: 1 }
+03:03:09.596 detox[42868] [90mi[39m [33mipc[39m detected event sessionStateUpdate { workersCount: 2 }
+03:03:09.747 detox[42824] [90mB[39m [33mws-server[39m connection :51700<->:51701
+03:03:09.747 detox[42867] [90mi[39m [33mws-client[39m opened web socket to: ws://localhost:51700
+03:03:09.748 detox[42824] [90mB[39m [33mws-server[39m connection :51700<->:51702
+03:03:09.749 detox[42824] [90mi[39m [33mws-server[39m get
+  data: {"type":"login","params":{"sessionId":"5b19cf63-8651-179b-c9b3-fd9f39ee4062","role":"tester"},"messageId":0}
+03:03:09.749 detox[42867] [90mi[39m [33mws-client[39m send message
+  data: {"type":"login","params":{"sessionId":"5b19cf63-8651-179b-c9b3-fd9f39ee4062","role":"tester"},"messageId":0}
+03:03:09.749 detox[42868] [90mi[39m [33mws-client[39m opened web socket to: ws://localhost:51700
+03:03:09.750 detox[42824] [90mi[39m [33mws-server[39m created session 5b19cf63-8651-179b-c9b3-fd9f39ee4062
+03:03:09.750 detox[42824] [90mi[39m [33mws-server[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+03:03:09.750 detox[42824] [90mi[39m [33mws-server[39m tester joined session 5b19cf63-8651-179b-c9b3-fd9f39ee4062
+03:03:09.750 detox[42867] [90mi[39m [33mws-client[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+03:03:09.750 detox[42868] [90mi[39m [33mws-client[39m send message
+  data: {"type":"login","params":{"sessionId":"83b37439-a663-7c4e-6aa8-b89490b91e1a","role":"tester"},"messageId":0}
+03:03:09.751 detox[42824] [90mi[39m [33mws-server[39m get
+  data: {"type":"login","params":{"sessionId":"83b37439-a663-7c4e-6aa8-b89490b91e1a","role":"tester"},"messageId":0}
+03:03:09.751 detox[42824] [90mi[39m [33mws-server[39m created session 83b37439-a663-7c4e-6aa8-b89490b91e1a
+03:03:09.751 detox[42824] [90mi[39m [33mws-server[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+03:03:09.751 detox[42824] [90mi[39m [33mws-server[39m tester joined session 83b37439-a663-7c4e-6aa8-b89490b91e1a
+03:03:09.752 detox[42868] [90mi[39m [33mws-client[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+03:03:09.789 detox[42867] [90mE[39m [33mlifecycle[39m set up environment
+  error: Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!
+  PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools
+03:03:09.789 detox[42867] [90mB[39m [33mlifecycle[39m tear down environment
+03:03:09.789 detox[42868] [90mE[39m [33mlifecycle[39m set up environment
+  error: Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!
+  PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools
+03:03:09.789 detox[42868] [90mB[39m [33mlifecycle[39m tear down environment
+03:03:09.791 detox[42824] [90mi[39m [33mws-server[39m tester exited session 5b19cf63-8651-179b-c9b3-fd9f39ee4062
+03:03:09.791 detox[42824] [90mE[39m [33mws-server[39m connection :51700<->:51701
+03:03:09.791 detox[42867] [90mi[39m [33mipc[39m connection closed primary-42824 /tmp/detox.primary-42824 0 tries remaining of 0
+03:03:09.791 detox[42867] [90mi[39m [33mipc[39m secondary-42867 exceeded connection rety amount of  or stopRetrying flag set.
+03:03:09.791 detox[42867] [90mE[39m [33mlifecycle[39m tear down environment
+03:03:09.791 detox[42867] [90mE[39m [33mlifecycle[39m e2e/AppLaunch.test.js
+03:03:09.791 detox[42868] [90mi[39m [33mipc[39m connection closed primary-42824 /tmp/detox.primary-42824 0 tries remaining of 0
+03:03:09.791 detox[42868] [90mi[39m [33mipc[39m secondary-42868 exceeded connection rety amount of  or stopRetrying flag set.
+03:03:09.792 detox[42824] [90mi[39m [33mipc[39m socket disconnected secondary-42867
+03:03:09.792 detox[42824] [90mi[39m [33mws-server[39m tester exited session 83b37439-a663-7c4e-6aa8-b89490b91e1a
+03:03:09.792 detox[42824] [90mE[39m [33mws-server[39m connection :51700<->:51702
+03:03:09.792 detox[42824] [90mi[39m [33mipc[39m socket disconnected secondary-42868
+03:03:09.792 detox[42868] [90mE[39m [33mlifecycle[39m tear down environment
+03:03:09.792 detox[42868] [90mE[39m [33mlifecycle[39m e2e/RegisterProcess.test.js
+03:03:09.803 detox[42867] [90mB[39m [33mlifecycle[39m e2e/OnboardingProcess.test.js
+03:03:09.804 detox[42867] [90mB[39m [33mlifecycle[39m set up environment
+03:03:09.804 detox[42868] [90mB[39m [33mlifecycle[39m e2e/LoginProcess.test.js
+03:03:09.805 detox[42824] [90mi[39m [33mipc[39m ## socket connection to server detected ##
+03:03:09.805 detox[42867] [90mi[39m [33mipc[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+03:03:09.805 detox[42867] [90mi[39m [33mipc[39m requested connection to  primary-42824 /tmp/detox.primary-42824
+03:03:09.805 detox[42867] [90mi[39m [33mipc[39m Connecting client on Unix Socket : /tmp/detox.primary-42824
+03:03:09.805 detox[42868] [90mB[39m [33mlifecycle[39m set up environment
+03:03:09.806 detox[42824] [90mi[39m [33mipc[39m ## socket connection to server detected ##
+03:03:09.806 detox[42867] [90mi[39m [33mipc[39m retrying reset
+03:03:09.806 detox[42867] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerContext , { id: 'secondary-42867' }
+03:03:09.806 detox[42868] [90mi[39m [33mipc[39m Service path not specified, so defaulting to ipc.config.socketRoot + ipc.config.appspace + id 
+03:03:09.806 detox[42868] [90mi[39m [33mipc[39m requested connection to  primary-42824 /tmp/detox.primary-42824
+03:03:09.806 detox[42868] [90mi[39m [33mipc[39m Connecting client on Unix Socket : /tmp/detox.primary-42824
+03:03:09.807 detox[42824] [90mi[39m [33mipc[39m received event of :  registerContext { id: 'secondary-42867' }
+03:03:09.807 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+03:03:09.807 detox[42824] [90mi[39m [33mipc[39m received event of :  registerContext { id: 'secondary-42868' }
+03:03:09.807 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerContextDone {
+  testResults: [],
+  testSessionIndex: 0,
+  unsafe_earlyTeardown: undefined
+}
+03:03:09.807 detox[42824] [90mi[39m [33mipc[39m received event of :  registerWorker { workerId: 'w1' }
+03:03:09.807 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerWorkerDone { workersCount: 2 }
+03:03:09.807 detox[42867] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.807 detox[42867] [90mi[39m [33mipc[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+03:03:09.807 detox[42867] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerWorker , { workerId: 'w1' }
+03:03:09.807 detox[42868] [90mi[39m [33mipc[39m retrying reset
+03:03:09.807 detox[42868] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerContext , { id: 'secondary-42868' }
+03:03:09.807 detox[42868] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.808 detox[42824] [90mi[39m [33mipc[39m received event of :  registerWorker { workerId: 'w2' }
+03:03:09.808 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  registerWorkerDone { workersCount: 2 }
+03:03:09.808 detox[42867] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.808 detox[42867] [90mi[39m [33mipc[39m detected event registerWorkerDone { workersCount: 2 }
+03:03:09.808 detox[42868] [90mi[39m [33mipc[39m detected event registerContextDone { testResults: [], testSessionIndex: 0 }
+03:03:09.808 detox[42868] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  registerWorker , { workerId: 'w2' }
+03:03:09.808 detox[42868] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.808 detox[42868] [90mi[39m [33mipc[39m detected event registerWorkerDone { workersCount: 2 }
+03:03:09.810 detox[42824] [90mB[39m [33mws-server[39m connection :51700<->:51703
+03:03:09.810 detox[42824] [90mB[39m [33mws-server[39m connection :51700<->:51704
+03:03:09.810 detox[42867] [90mi[39m [33mws-client[39m opened web socket to: ws://localhost:51700
+03:03:09.811 detox[42824] [90mi[39m [33mws-server[39m get
+  data: {"type":"login","params":{"sessionId":"5b19cf63-8651-179b-c9b3-fd9f39ee4062","role":"tester"},"messageId":0}
+03:03:09.811 detox[42824] [90mi[39m [33mws-server[39m created session 5b19cf63-8651-179b-c9b3-fd9f39ee4062
+03:03:09.811 detox[42824] [90mi[39m [33mws-server[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+03:03:09.811 detox[42824] [90mi[39m [33mws-server[39m tester joined session 5b19cf63-8651-179b-c9b3-fd9f39ee4062
+03:03:09.811 detox[42824] [90mi[39m [33mws-server[39m get
+  data: {"type":"login","params":{"sessionId":"83b37439-a663-7c4e-6aa8-b89490b91e1a","role":"tester"},"messageId":0}
+03:03:09.811 detox[42824] [90mi[39m [33mws-server[39m created session 83b37439-a663-7c4e-6aa8-b89490b91e1a
+03:03:09.811 detox[42824] [90mi[39m [33mws-server[39m send
+  data: {
+    "type": "loginSuccess",
+    "params": {
+      "testerConnected": true,
+      "appConnected": false
+    },
+    "messageId": 0
+  }
+03:03:09.811 detox[42824] [90mi[39m [33mws-server[39m tester joined session 83b37439-a663-7c4e-6aa8-b89490b91e1a
+03:03:09.811 detox[42867] [90mi[39m [33mws-client[39m send message
+  data: {"type":"login","params":{"sessionId":"5b19cf63-8651-179b-c9b3-fd9f39ee4062","role":"tester"},"messageId":0}
+03:03:09.811 detox[42867] [90mi[39m [33mws-client[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+03:03:09.811 detox[42868] [90mi[39m [33mws-client[39m opened web socket to: ws://localhost:51700
+03:03:09.811 detox[42868] [90mi[39m [33mws-client[39m send message
+  data: {"type":"login","params":{"sessionId":"83b37439-a663-7c4e-6aa8-b89490b91e1a","role":"tester"},"messageId":0}
+03:03:09.812 detox[42867] [90mE[39m [33mlifecycle[39m set up environment
+  error: Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!
+  PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools
+03:03:09.812 detox[42867] [90mB[39m [33mlifecycle[39m tear down environment
+03:03:09.812 detox[42868] [90mi[39m [33mws-client[39m get message
+  data: {"type":"loginSuccess","params":{"testerConnected":true,"appConnected":false},"messageId":0}
+   
+03:03:09.812 detox[42868] [90mE[39m [33mlifecycle[39m set up environment
+  error: Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!
+  PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools
+03:03:09.812 detox[42868] [90mB[39m [33mlifecycle[39m tear down environment
+03:03:09.813 detox[42824] [90mi[39m [33mws-server[39m tester exited session 5b19cf63-8651-179b-c9b3-fd9f39ee4062
+03:03:09.813 detox[42824] [90mE[39m [33mws-server[39m connection :51700<->:51703
+03:03:09.813 detox[42824] [90mi[39m [33mipc[39m socket disconnected secondary-42867
+03:03:09.813 detox[42824] [90mi[39m [33mws-server[39m tester exited session 83b37439-a663-7c4e-6aa8-b89490b91e1a
+03:03:09.813 detox[42867] [90mi[39m [33mipc[39m connection closed primary-42824 /tmp/detox.primary-42824 0 tries remaining of 0
+03:03:09.813 detox[42867] [90mi[39m [33mipc[39m secondary-42867 exceeded connection rety amount of  or stopRetrying flag set.
+03:03:09.813 detox[42867] [90mE[39m [33mlifecycle[39m tear down environment
+03:03:09.813 detox[42867] [90mE[39m [33mlifecycle[39m e2e/OnboardingProcess.test.js
+03:03:09.813 detox[42868] [90mi[39m [33mipc[39m connection closed primary-42824 /tmp/detox.primary-42824 0 tries remaining of 0
+03:03:09.814 detox[42824] [90mE[39m [33mws-server[39m connection :51700<->:51704
+03:03:09.814 detox[42824] [90mi[39m [33mipc[39m socket disconnected secondary-42868
+03:03:09.814 detox[42868] [90mi[39m [33mipc[39m secondary-42868 exceeded connection rety amount of  or stopRetrying flag set.
+03:03:09.814 detox[42868] [90mE[39m [33mlifecycle[39m tear down environment
+03:03:09.814 detox[42868] [90mE[39m [33mlifecycle[39m e2e/LoginProcess.test.js
+03:03:09.823 detox[42834] [90mi[39m [33mipc[39m dispatching event to  primary-42824 /tmp/detox.primary-42824  :  reportTestResults , {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/AppLaunch.test.js',
+      testExecError: [String: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools'] {
+        type: 'Error',
+        stack: "DetoxRuntimeError: Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+          'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools\n' +
+          '    at throwMissingGmsaasError (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/utils/environment.js:172:9)\n' +
+          '    at Object.getGmsaasPath (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/utils/environment.js:137:29)\n' +
+          '    at GenycloudServiceLocator.get exec [as exec] (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/devices/servicelocator/android/genycloudServiceLocator.js:11:41)\n' +
+          '    at Genycloud.createValidator (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/devices/validation/factories/index.js:8:43)\n' +
+          '    at DetoxWorker.init (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/DetoxWorker.js:131:46)\n' +
+          '    at init.next (<anonymous>)\n' +
+          '    at getNextResult (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/caf/src/caf.js:253:25)\n' +
+          '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+        message: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+          'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/RegisterProcess.test.js',
+      testExecError: [String: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools'] {
+        type: 'Error',
+        stack: "DetoxRuntimeError: Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+          'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools\n' +
+          '    at throwMissingGmsaasError (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/utils/environment.js:172:9)\n' +
+          '    at Object.getGmsaasPath (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/utils/environment.js:137:29)\n' +
+          '    at GenycloudServiceLocator.get exec [as exec] (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/devices/servicelocator/android/genycloudServiceLocator.js:11:41)\n' +
+          '    at Genycloud.createValidator (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/devices/validation/factories/index.js:8:43)\n' +
+          '    at DetoxWorker.init (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/DetoxWorker.js:131:46)\n' +
+          '    at init.next (<anonymous>)\n' +
+          '    at getNextResult (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/caf/src/caf.js:253:25)\n' +
+          '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+        message: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+          'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/OnboardingProcess.test.js',
+      testExecError: [String: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools'] {
+        type: 'Error',
+        stack: "DetoxRuntimeError: Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+          'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools\n' +
+          '    at throwMissingGmsaasError (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/utils/environment.js:172:9)\n' +
+          '    at Object.getGmsaasPath (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/utils/environment.js:137:29)\n' +
+          '    at GenycloudServiceLocator.get exec [as exec] (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/devices/servicelocator/android/genycloudServiceLocator.js:11:41)\n' +
+          '    at Genycloud.createValidator (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/devices/validation/factories/index.js:8:43)\n' +
+          '    at DetoxWorker.init (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/DetoxWorker.js:131:46)\n' +
+          '    at init.next (<anonymous>)\n' +
+          '    at getNextResult (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/caf/src/caf.js:253:25)\n' +
+          '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+        message: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+          'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools'
+      },
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/LoginProcess.test.js',
+      testExecError: [String: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools'] {
+        type: 'Error',
+        stack: "DetoxRuntimeError: Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+          'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools\n' +
+          '    at throwMissingGmsaasError (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/utils/environment.js:172:9)\n' +
+          '    at Object.getGmsaasPath (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/utils/environment.js:137:29)\n' +
+          '    at GenycloudServiceLocator.get exec [as exec] (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/devices/servicelocator/android/genycloudServiceLocator.js:11:41)\n' +
+          '    at Genycloud.createValidator (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/devices/validation/factories/index.js:8:43)\n' +
+          '    at DetoxWorker.init (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/detox/src/DetoxWorker.js:131:46)\n' +
+          '    at init.next (<anonymous>)\n' +
+          '    at getNextResult (/Users/ritikprasad/Desktop/rn_ci_cd/node_modules/caf/src/caf.js:253:25)\n' +
+          '    at processTicksAndRejections (node:internal/process/task_queues:105:5)',
+        message: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+          'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools'
+      },
+      isPermanentFailure: false
+    }
+  ]
+}
+03:03:09.824 detox[42824] [90mi[39m [33mipc[39m received event of :  reportTestResults {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/AppLaunch.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/RegisterProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/OnboardingProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/LoginProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    }
+  ]
+}
+03:03:09.824 detox[42824] [90mi[39m [33mipc[39m dispatching event to socket  :  reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/AppLaunch.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/RegisterProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/OnboardingProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/LoginProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    }
+  ]
+}
+03:03:09.824 detox[42824] [90mi[39m [33mipc[39m broadcasting event to all known sockets listening to  /tmp/detox.primary-42824  :   sessionStateUpdate {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/AppLaunch.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/RegisterProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/OnboardingProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/LoginProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    }
+  ]
+}
+03:03:09.824 detox[42834] [90mi[39m [33mipc[39m ## received events ##
+03:03:09.824 detox[42834] [90mi[39m [33mipc[39m detected event reportTestResultsDone {
+  testResults: [
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/AppLaunch.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/RegisterProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/OnboardingProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    },
+    {
+      success: false,
+      testFilePath: '/Users/ritikprasad/Desktop/rn_ci_cd/e2e/LoginProcess.test.js',
+      testExecError: "Failed to locate Genymotion's gmsaas executable. Please add it to your $PATH variable!\n" +
+        'PATH is currently set to: /Users/ritikprasad/Desktop/rn_ci_cd/node_modules/.bin:/Users/ritikprasad/Desktop/node_modules/.bin:/Users/ritikprasad/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin:/Users/ritikprasad/.pyenv/shims:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ritikprasad/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools:/Users/ritikprasad/Library/Android/sdk/emulator:/Users/ritikprasad/Library/Android/sdk/tools:/Users/ritikprasad/Library/Android/sdk/tools/bin:/Users/ritikprasad/Library/Android/sdk/platform-tools',
+      isPermanentFailure: false
+    }
+  ]
+}
+03:03:09.826 detox[42834] [90mi[39m [33mipc[39m connection closed primary-42824 /tmp/detox.primary-42824 0 tries remaining of 0
+03:03:09.827 detox[42824] [90mi[39m [33mipc[39m socket disconnected secondary-42834
+03:03:09.827 detox[42834] [90mi[39m [33mipc[39m secondary-42834 exceeded connection rety amount of  or stopRetrying flag set.
+03:03:09.898 detox[42824] [90mE[39m [33mlifecycle[39m Command failed with exit code = 1:
+jest --config e2e/jest.config.js --maxWorkers 2
+03:03:09.899 detox[42824] [90mi[39m [33mws-server[39m Detox server has been closed gracefully
+03:03:09.900 detox[42824] [90mE[39m [33mlifecycle[39m node_modules/.bin/detox test --configuration android.genymotion.release -l verbose --maxWorkers 2 --record-logs all --take-screenshots all
