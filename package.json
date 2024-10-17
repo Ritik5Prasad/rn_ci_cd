@@ -11,6 +11,7 @@
     "test": "jest",
     "detox:android_build": "detox build --configuration android.emu.debug",
     "detox:android_test": "detox test --configuration android.emu.debug",
+    "detox:android:test:ci": "detox test --configuration android.emu.debug --headless --record-logs failing --record-videos failing --take-screenshots failing",
     "detox:ios_build": "detox build --configuration ios.sim.debug",
     "detox:ios_test": "detox test --configuration ios.sim.debug",
     "detox:genymotion_cloud":"detox test --configuration android.genymotion.release -l verbose --maxWorkers 2 --record-logs all --take-screenshots all",

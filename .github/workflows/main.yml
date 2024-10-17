@@ -47,27 +47,21 @@ jobs:
       - name: Run Unit Tests
         run: npm run test
 
-      - name: Set up Android SDK
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y wget tar
-          wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip
-          mkdir -p $HOME/android-sdk
-          unzip commandlinetools-linux-8512546_latest.zip -d $HOME/android-sdk/cmdline-tools
-          mv $HOME/android-sdk/cmdline-tools/cmdline-tools $HOME/android-sdk/cmdline-tools/latest
-          yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=$HOME/android-sdk/ --install "platform-tools" "build-tools;33.0.2" "platforms;android-33"
-        env:
-          ANDROID_HOME: ${{ github.workspace }}/android-sdk
-          PATH: ${{ github.workspace }}/android-sdk/platform-tools:${{ github.workspace }}/android-sdk/cmdline-tools/latest/bin:$PATH
+      - name: Run Detox tests 
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 31
+          arch: x86_64
+          avd-name: Android_API31
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -no-metrics
+          disable-animations: false
+          script: npm run detox:android:test:ci
 
-      - name: Build Detox and Run E2E Tests
-        run: |
-          npm run detox:genymotion_cloud
-          npm run detox:genymotion_cloud
-        env:
-           ANDROID_HOME: ${{ github.workspace }}/android-sdk
-           PATH: ${{ github.workspace }}/android-sdk/platform-tools:${{ github.workspace }}/android-sdk/cmdline-tools/latest/bin:$PATH
-
+   #  - name: Build Detox and Run E2E Tests
+      #   run: |
+      #     npm run detox:genymotion_cloud
+      #     npm run detox:genymotion_cloud
       
       # Prefer to run localy e2e beacause it requires high computation and cost much on cloud services
       # If you have money go with Genymotion 0.05$ per minute😁
