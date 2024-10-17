@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run format
+npm run lint:fix
+npm run test
+
+# Comment Below to save your time but still its required 
+# to test before commiting and maintain Automated regression testing
+
+# npm run detox:android_build
+# npm run detox:android_test
