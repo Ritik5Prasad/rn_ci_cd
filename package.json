@@ -13,7 +13,7 @@
     "detox:android_test": "detox test --configuration android.emu.debug",
     "detox:ios_build": "detox build --configuration ios.sim.debug",
     "detox:ios_test": "detox test --configuration ios.sim.debug",
-    "detox:genymotion_cloud":"detox test --configuration android.genycloud.release -l verbose --maxWorkers 2 --record-logs all --take-screenshots all",
+    "detox:genymotion_cloud":"detox test --configuration android.genymotion.release -l verbose --maxWorkers 2 --record-logs all --take-screenshots all",
     "prepare": "husky install"
   },
   "dependencies": {
