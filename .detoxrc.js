@@ -12,8 +12,7 @@ module.exports = {
   apps: {
     'ios.debug': {
       type: 'ios.app',
-      binaryPath:
-        'ios/build/Build/Products/Debug-iphonesimulator/rn_ci_cd.app',
+      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/rn_ci_cd.app',
       build:
         'xcodebuild -workspace ios/rn_ci_cd.xcworkspace -scheme rn_ci_cd -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build',
     },
@@ -57,6 +56,12 @@ module.exports = {
         avdName: 'Pixel_6a_API_34',
       },
     },
+    'genymotion.emulator.uuid': {
+      type: 'android.genycloud',
+      device: {
+        recipeUUID: 'a521e033-0fa6-4579-9b2c-8f877ea50af2',
+      },
+    },
   },
   configurations: {
     'ios.sim.debug': {
@@ -81,6 +86,14 @@ module.exports = {
     },
     'android.emu.release': {
       device: 'emulator',
+      app: 'android.release',
+    },
+    'android.genymotion.debug': {
+      device: 'genymotion.emulator.uuid',
+      app: 'android.debug',
+    },
+    'android.genymotion.release': {
+      device: 'genymotion.emulator.uuid',
       app: 'android.release',
     },
   },
